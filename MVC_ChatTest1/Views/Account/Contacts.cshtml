@@ -1,0 +1,24 @@
+﻿@model IQueryable<ApplicationUserManager>
+    @{ 
+        ViewBag.Title = "Contacts";
+    }
+
+
+<h1>Contacts</h1>
+
+@if (Model.Any())
+{
+    foreach (var user in Model)
+    {
+        <div class="card-body">
+            <h5 class="card-title">
+                <h1>@user.;</h1>
+            </h5>
+        </div>
+    }
+
+}
+
+else {
+    <h2>No users created yet</h2>
+}
